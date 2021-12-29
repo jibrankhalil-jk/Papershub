@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "864985818417",
+    "firebase_url": "https://easy-learnings.firebaseio.com",
+    "project_id": "easy-learnings",
+    "storage_bucket": "easy-learnings.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864985818417:android:47a028685f8d5ee72a3c10",
+        "android_client_info": {
+          "package_name": "com.techzoid.papershub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864985818417-p7jnj0heobiniegfmleon1au9r8mddds.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techzoid.papershub",
+            "certificate_hash": "317b7487ad9d1ed8ea3cf589922119c587d8f58c"
+          }
+        },
+        {
+          "client_id": "864985818417-1m1s2se6flvjkr6usf74dsboq6p5fhqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFVCCPmVk1cWyWjXVyFf3xNPDIsSGkRco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864985818417-1m1s2se6flvjkr6usf74dsboq6p5fhqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
