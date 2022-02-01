@@ -41,6 +41,11 @@ dependencies:
   firebase_core: ^1.6.0
   firebase_auth: ^3.1.0
   firebase_storage: ^10.0.3
+  cloud_firestore: ^3.1.6
+  syncfusion_flutter_pdfviewer: ^19.4.48-beta
+  lottie: ^1.2.1
+
+
 
 dev_dependencies:
   flutter_test:

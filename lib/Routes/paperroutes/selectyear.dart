@@ -48,7 +48,7 @@ class _SelectYearState extends State<SelectYear> {
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 11,
             ),
             Center(
                 child: Text(

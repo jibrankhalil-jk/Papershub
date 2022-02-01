@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:papershub/Routes/paperroutes/paperview.dart';
 import 'package:papershub/Routes/paperroutes/selectyear.dart';
 
 import '../../constants.dart';
@@ -14,6 +15,16 @@ constants finalconst = constants();
 
 class _SelectSubjectState extends State<SelectSubject> {
   var Textstyly = TextStyle(color: Colors.white);
+  List Subjects = [
+    'biology',
+    'maths',
+    'computer',
+    'physics',
+    'english',
+    'urdu',
+    'pst',
+    'islamiat'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +48,7 @@ class _SelectSubjectState extends State<SelectSubject> {
               ],
             ),
             SizedBox(
-              height: 50,
+              height: 11,
             ),
             Center(
               child: Image.asset(
@@ -46,7 +57,7 @@ class _SelectSubjectState extends State<SelectSubject> {
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 11,
             ),
             Center(
                 child: Text(
@@ -56,184 +67,46 @@ class _SelectSubjectState extends State<SelectSubject> {
             SizedBox(
               height: 20,
             ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
-              child: Column(
-                children: [
-                  MaterialButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => SelectYear(
-                            subjectt: 'Chemistry',
+            Expanded(
+              child: ListView.builder(
+                itemCount: Subjects.length,
+                itemBuilder: (context, index) {
+                  String subname = Subjects[index];
+                  return Container(
+                    margin: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
+                    child: Column(
+                      children: [
+                        MaterialButton(
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) => SelectYear(
+                                subjectt: '${Subjects[index]}',
+                              ),
+                            ));
+                          },
+                          color: finalconst.blue,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 30, vertical: 15),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "${subname.toUpperCase()}",
+                                  style: Textstyly,
+                                ),
+                                Text(
+                                  "2015 - 2019",
+                                  style: Textstyly,
+                                )
+                              ],
+                            ),
                           ),
-                        ),
-                      );
-                    },
-                    color: finalconst.blue,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30, vertical: 15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Chemistry",
-                            style: Textstyly,
-                          ),
-                          Text(
-                            "2015 - 2019",
-                            style: Textstyly,
-                          )
-                        ],
-                      ),
+                        )
+                      ],
                     ),
-                  )
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
-              child: Column(
-                children: [
-                  MaterialButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => SelectYear(
-                            subjectt: 'Computer',
-                          ),
-                        ),
-                      );
-                    },
-                    color: finalconst.blue,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30, vertical: 15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Computer",
-                            style: Textstyly,
-                          ),
-                          Text(
-                            "2015 - 2019",
-                            style: Textstyly,
-                          )
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
-              child: Column(
-                children: [
-                  MaterialButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => SelectYear(
-                            subjectt: 'Maths',
-                          ),
-                        ),
-                      );
-                    },
-                    color: finalconst.blue,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30, vertical: 15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Maths",
-                            style: Textstyly,
-                          ),
-                          Text(
-                            "2015 - 2019",
-                            style: Textstyly,
-                          )
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
-              child: Column(
-                children: [
-                  MaterialButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => SelectYear(
-                            subjectt: 'Physics',
-                          ),
-                        ),
-                      );
-                    },
-                    color: finalconst.blue,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30, vertical: 15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Physics",
-                            style: Textstyly,
-                          ),
-                          Text(
-                            "2015 - 2019",
-                            style: Textstyly,
-                          )
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
-              child: Column(
-                children: [
-                  MaterialButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => SelectYear(
-                            subjectt: 'Islamiyat',
-                          ),
-                        ),
-                      );
-                    },
-                    color: finalconst.blue,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30, vertical: 15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Islamiyat",
-                            style: Textstyly,
-                          ),
-                          Text(
-                            "2015 - 2019",
-                            style: Textstyly,
-                          )
-                        ],
-                      ),
-                    ),
-                  )
-                ],
+                  );
+                },
               ),
             ),
           ],

@@ -1,10 +1,14 @@
 import 'dart:async';
+import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 class AuthServices {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseStorage _storage = FirebaseStorage.instance;
 
-  // final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   // ------------------------------------- Checking use info -------------------------------------------------------
   Future userinfo() async {
@@ -83,5 +87,43 @@ class AuthServices {
     } catch (e) {
       return print(e.toString());
     }
+  }
+
+  Future pdfurl(var clas, year, subject, papertype) async {
+    var url;
+    try {
+      var ref = _storage
+          .ref('/classes/$clas/akueb/$year/$subject/eng/$papertype/paper.pdf');
+      url = await ref.getDownloadURL();
+    } catch (e) {
+      print('-' * 22);
+      print('/classes/$clas/akueb/$year/$subject/eng/$papertype/paper.pdf');
+      print('-' * 22);
+      var err =
+          "[firebase_storage/object-not-found] No object exists at the desired reference.";
+    }
+    return url;
+  }
+
+  Future testpdfurl(var url) async {
+    try {
+      var ref = _storage.ref('$url');
+      url = await ref.getDownloadURL();
+    } catch (e) {
+      print('-' * 22);
+      print('$url');
+      print('-' * 22);
+      var err =
+          "[firebase_storage/object-not-found] No object exists at the desired reference.";
+    }
+    return url;
+  }
+
+  Future datalist() async {
+    var data;
+    await _firestore.collection('testing_services').get().then((QuerySnapshot) {
+      data = QuerySnapshot.docs;
+    });
+    return data;
   }
 }

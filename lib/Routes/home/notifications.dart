@@ -13,10 +13,8 @@ class Notificatiosn extends StatefulWidget {
 
 constants finalconst = constants();
 List<notificationmodule> notifications = [
-  notificationmodule(
-      "", "John Doe", "Lorem ipsum dolor sit amet.", "1 min ago"),
-  notificationmodule(
-      "", "John Doe", "Lorem ipsum dolor sit amet.", "1 min ago"),
+  notificationmodule("", "Papers Hub", "Welcome to Papers Hub", "1 min ago"),
+  notificationmodule("", "Papers Hub", ".", "1 min ago"),
 ];
 
 class _NotificatiosnState extends State<Notificatiosn> {
