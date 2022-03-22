@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:papershub/Modules/notificationmodule.dart';
 
+import '../../Models/notificationmodule.dart';
 import '../../constants.dart';
 
 class Notificatiosn extends StatefulWidget {
@@ -12,9 +12,9 @@ class Notificatiosn extends StatefulWidget {
 }
 
 constants finalconst = constants();
-List<notificationmodule> notifications = [
-  notificationmodule("", "Papers Hub", "Welcome to Papers Hub", "1 min ago"),
-  notificationmodule("", "Papers Hub", ".", "1 min ago"),
+List<notificationmodel> notifications = [
+  notificationmodel("", "Papers Hub", "Welcome to Papers Hub", "1 mi ago"),
+  notificationmodel("", "Papers Hub", ".", "1 min ago"),
 ];
 
 class _NotificatiosnState extends State<Notificatiosn> {
