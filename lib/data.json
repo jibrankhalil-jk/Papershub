@@ -1,0 +1,34 @@
+{
+  "0" : {
+    "Question" : ["what is a computer?",""],
+    "options" : {"a": "book","b": "machine","c": "game","d": "oil" },
+    "answer" : "b",
+    "hint" : "Computer is an electronic machine"
+  },
+  "1" : {
+    "Question" : ["what is a computer?",""],
+    "options" : {"a": "book","b": "machine","c": "game","d": "oil" },
+    "answer" : "b",
+    "hint" : "Computer is an electronic machine"
+  },
+  "2" : {
+    "Question" : ["what is a computer?",""],
+    "options" : {"a": "book","b": "machine","c": "game","d": "oil" },
+    "answer" : "b",
+    "hint" : "Computer is an electronic machine"
+  },
+  "3" : {
+    "Question" : ["what is a computer?",""],
+    "options" : {"a": "book","b": "machine","c": "game","d": "oil" },
+    "answer" : "b",
+    "hint" : "Computer is an electronic machine"
+  },
+  "4" : {
+    "Question" : ["what is a computer?",""],
+    "options" : {"a": "book","b": "machine","c": "game","d": "oil" },
+    "answer" : "b",
+    "hint" : "Computer is an electronic machine"
+  }
+
+
+}
